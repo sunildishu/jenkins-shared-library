@@ -1,7 +1,7 @@
 def call() {
     // Define the AWS region and ECR repository URL
     def region = "ap-south-1"
-    def registry = "785236889276.dkr.ecr.ap-south-1.amazonaws.com/testecr"
+    def registry = "785236889276.dkr.ecr.ap-south-1.amazonaws.com/ecr3-ecr"
 
 
    // Perform Docker image push to ECR
