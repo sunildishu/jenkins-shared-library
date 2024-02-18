@@ -5,7 +5,7 @@ def call() {
 
 
    // Perform Docker image push to ECR
-    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'sunil-ecr', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'ecr3-ecr', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
         sh "aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${registry}"
         sh "docker push ${registry}"
     }
